@@ -1,6 +1,6 @@
 <?php
 
-namespace ArtisanSdk\Skeleton\Tests;
+namespace ArtisanSdk\Support\Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnit;
 

@@ -1,6 +1,6 @@
-# Skeleton
+# Support
 
-The starting skeleton for an Artisan SDK package.
+Supporting functions, classes, helpers and code for other Artisan SDK packages.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ The starting skeleton for an Artisan SDK package.
 The package installs into a PHP application like any other PHP package:
 
 ```bash
-composer require artisansdk/skeleton
+composer require artisansdk/support
 ```
 
 ## Usage Guide
@@ -38,7 +38,7 @@ See the `composer.json` for more details on their execution and reporting output
 
 ## Licensing
 
-Copyright (c) 2018 [Artisans Collaborative](https://artisanscollaborative.com)
+Copyright (c) 2019 [Artisans Collaborative](https://artisanscollaborative.com)
 
 This package is released under the MIT license. Please see the LICENSE file
 distributed with every copy of the code for commercial licensing terms.
