@@ -65,7 +65,7 @@ class SparseFields implements FieldMapping
             (array) $request->offsetGet('fields'),
             (array) $request->offsetGet('relations'),
             $mappings instanceof FieldMapping
-                ? $mappings->getFieldMap()
+                ? $mappings->mappings()
                 : (array) $mappings
         );
     }

@@ -2,6 +2,7 @@
 
 namespace ArtisanSdk\Support\Tests;
 
+use ArtisanSdk\Contract\FieldMapping;
 use ArtisanSdk\Support\SparseFields;
 use Illuminate\Support\Fluent;
 
@@ -87,6 +88,16 @@ class SparseFieldsTest extends TestCase
         $this->assertCount(1, $relations);
         $this->assertSame(['fizz', 'bazz'], $sparse->columns('model'));
         $this->assertSame(['*'], $closure($this->queryBuilder())->columns);
+
+        $request = new Fluent(['fields' => ['foo', 'bar']]);
+        $sparse = SparseFields::make($request, new class() implements FieldMapping {
+            public function mappings(): array
+            {
+                return ['foo' => 'fizz', 'bar' => 'bazz'];
+            }
+        });
+
+        $this->assertSame(['fizz', 'bazz'], $sparse->columns());
     }
 
     /**
